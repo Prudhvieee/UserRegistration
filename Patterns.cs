@@ -6,28 +6,58 @@ namespace RegexPatterns
 {
     class Patterns
     {
+        //regex pattern for first name
         public static string REGEX_FIRSTNAME = "^[A-Z]{1}[A-Za-z]{2,}$";
+        //regex pattern for last name
         public static string REGEX_LASTSTNAME = "^[A-Z]{1}[A-Za-z]{2,}$";
+        //regex pattern for MAIL
         public static string REGEX_EMAIL = "^[a-zA-Z0-9_+&*-]+(?:\\." +"[a-zA-Z0-9_+&*-]+)*@" +
                                       "(?:[a-zA-Z0-9-]+\\.)+[a-z" +"A-Z]{2,7}$";
+        //regex pattern for mobile number
         public static string REGEX_MOBILENUMBER = "^[1-9]{2}"+"\\s([0-9]{10})$";
+        //regex pattern for Password
         public static string REGEX_PASSWORD = "(?=.*?[._+-@#&*$])(?=.*[A-Z])(?=.*[0-9])([0-9a-zA-z]{7,})";
+        /// <summary>
+        /// validates firstname
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <returns></returns>
         public bool ValidateFirstName(string firstName)
         {
             return Regex.IsMatch(firstName, REGEX_FIRSTNAME);
         }
+        /// <summary>
+        /// validates last name
+        /// </summary>
+        /// <param name="lastName"></param>
+        /// <returns></returns>
         public bool ValidateLastName(string lastName)
         {
             return Regex.IsMatch(lastName, REGEX_FIRSTNAME);
         }
+        /// <summary>
+        /// validates email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
         public bool ValidateEmail(string email)
         {
             return Regex.IsMatch(email, REGEX_EMAIL);
         }
+        /// <summary>
+        /// validates mobile number
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public bool ValidateMobileNumber(string number)
         {
             return Regex.IsMatch(number, REGEX_MOBILENUMBER);
         }
+        /// <summary>
+        /// validates password
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public bool ValidatePassword(string password)
         {
             return Regex.IsMatch(password, REGEX_PASSWORD);

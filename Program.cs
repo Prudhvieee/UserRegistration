@@ -15,6 +15,8 @@ namespace UserRegistration
             Console.WriteLine(patterns.ValidateLastName(Console.ReadLine()));
             Console.WriteLine("Enter mail");
             Console.WriteLine(patterns.ValidateEmail(Console.ReadLine()));
+            Console.WriteLine("Enter Mobile number");
+            Console.WriteLine(patterns.ValidateMobileNumber(Console.ReadLine()));
         }
     }
 }

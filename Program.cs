@@ -17,6 +17,8 @@ namespace UserRegistration
             Console.WriteLine(patterns.ValidateEmail(Console.ReadLine()));
             Console.WriteLine("Enter Mobile number");
             Console.WriteLine(patterns.ValidateMobileNumber(Console.ReadLine()));
+            Console.WriteLine("Enter Password (minimum 8 characters)");
+            Console.WriteLine(patterns.ValidatePassword(Console.ReadLine()));
         }
     }
 }

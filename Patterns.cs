@@ -8,10 +8,8 @@ namespace RegexPatterns
     {
         public static string REGEX_FIRSTNAME = "^[A-Z]{1}[A-Za-z]{2,}$";
         public static string REGEX_LASTSTNAME = "^[A-Z]{1}[A-Za-z]{2,}$";
-        public static string REGEX_EMAIL = "^[a-zA-Z0-9_+&*-]+(?:\\." +
-                                      "[a-zA-Z0-9_+&*-]+)*@" +
-                                      "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-                                      "A-Z]{2,7}$";
+        public static string REGEX_EMAIL = "^[a-zA-Z0-9_+&*-]+(?:\\." +"[a-zA-Z0-9_+&*-]+)*@" +
+                                      "(?:[a-zA-Z0-9-]+\\.)+[a-z" +"A-Z]{2,7}$";
         public static string REGEX_MOBILENUMBER = "^[1-9]{2}"+"\\s([0-9]{10})$";
         public static string REGEX_PASSWORD = "(?=.*?[._+-@#&*$])(?=.*[A-Z])(?=.*[0-9])([0-9a-zA-z]{7,})";
         public bool ValidateFirstName(string firstName)

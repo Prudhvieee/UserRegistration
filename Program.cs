@@ -11,6 +11,8 @@ namespace UserRegistration
             Patterns patterns = new Patterns();
             Console.WriteLine("Enter first Name");
             Console.WriteLine(patterns.ValidateFirstName(Console.ReadLine()));
+            Console.WriteLine("Enter last Name");
+            Console.WriteLine(patterns.ValidateLastName(Console.ReadLine()));
         }
     }
 }

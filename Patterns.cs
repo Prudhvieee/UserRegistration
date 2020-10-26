@@ -8,6 +8,7 @@ namespace RegexPatterns
     {
         public static string REGEX_FIRSTNAME = "^[A-Z]{1}[A-Za-z]{2,}$";
         public static string REGEX_LASTSTNAME = "^[A-Z]{1}[A-Za-z]{2,}$";
+        public static string REGEX_EMAIL = "^[a-z\\.]{3,}"+"@([a-z\\.]{2,})$";
 
         public bool ValidateFirstName(string firstName)
         {
@@ -16,6 +17,10 @@ namespace RegexPatterns
         public bool ValidateLastName(string lastName)
         {
             return Regex.IsMatch(lastName, REGEX_FIRSTNAME);
+        }
+        public bool ValidateEmail(string email)
+        {
+            return Regex.IsMatch(email, REGEX_EMAIL);
         }
     }
 }

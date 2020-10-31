@@ -11,10 +11,10 @@ namespace UserRegistration
             Patterns patterns = new Patterns();
             //reads first name from user
             Console.WriteLine("Enter first Name");
-            Console.WriteLine(patterns.ValidateFirstName(Console.ReadLine()));
+            Console.WriteLine(patterns.ValidateName(Console.ReadLine()));
             //reads last name from user
             Console.WriteLine("Enter last Name");
-            Console.WriteLine(patterns.ValidateLastName(Console.ReadLine()));
+            Console.WriteLine(patterns.ValidateName(Console.ReadLine()));
             //reads email from user
             Console.WriteLine("Enter mail");
             Console.WriteLine(patterns.ValidateEmail(Console.ReadLine()));

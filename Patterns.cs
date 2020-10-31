@@ -4,12 +4,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 namespace RegexPatterns
 {
-    class Patterns
+    public class Patterns
     {
         //regex pattern for first name
-        public static string REGEX_FIRSTNAME = "^[A-Z]{1}[A-Za-z]{2,}$";
-        //regex pattern for last name
-        public static string REGEX_LASTSTNAME = "^[A-Z]{1}[A-Za-z]{2,}$";
+        public static string REGEX_NAME = "^[A-Z]{1}[A-Za-z]{2,}$";
         //regex pattern for MAIL
         public static string REGEX_EMAIL = "^[a-zA-Z0-9_+&*-]+(?:\\." +"[a-zA-Z0-9_+&*-]+)*@" +
                                       "(?:[a-zA-Z0-9-]+\\.)+[a-z" +"A-Z]{2,7}$";
@@ -22,18 +20,9 @@ namespace RegexPatterns
         /// </summary>
         /// <param name="firstName"></param>
         /// <returns></returns>
-        public bool ValidateFirstName(string firstName)
+        public bool ValidateName(string name)
         {
-            return Regex.IsMatch(firstName, REGEX_FIRSTNAME);
-        }
-        /// <summary>
-        /// validates last name
-        /// </summary>
-        /// <param name="lastName"></param>
-        /// <returns></returns>
-        public bool ValidateLastName(string lastName)
-        {
-            return Regex.IsMatch(lastName, REGEX_FIRSTNAME);
+            return Regex.IsMatch(name, REGEX_NAME);
         }
         /// <summary>
         /// validates email
